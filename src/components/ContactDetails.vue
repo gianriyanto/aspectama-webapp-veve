@@ -1,11 +1,11 @@
 <template>
   <div id="ContactDetails">
     <span class="phone">
-      62 812 3201 2145
+      62 877 4102 9750
     </span>
     <span class="slash"> / </span>
     <a class="email" href="mailto:consult@aspectamalsut.co.id">
-      consult@aspectamalsut.co.id
+      admin@aspectamalsut.co.id
     </a>
   </div>
 </template>

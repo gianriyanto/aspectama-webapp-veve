@@ -58,7 +58,7 @@ export default {
       justify-content: center;
       height: 41px;
       width: 150px;
-      background-image: linear-gradient(to right, #45bfa3, #33b5a6);
+      background-image: linear-gradient(to right top, #75d9b5, #45bfa3);
       border-radius: 30px;
       transition: all .4s ease-in-out;
       box-shadow: 1px 3px 20px rgba(125, 128, 126, 0.5);

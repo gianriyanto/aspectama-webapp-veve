@@ -99,7 +99,7 @@ export default {
           height: 40%;
           margin: 0 4px 4px 0;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #fdc0c0, #ffb3c1);
+          background-image: linear-gradient(to right top, #ff4998, #ff995b);
 
           .label {
             text-align: center;
@@ -108,7 +108,7 @@ export default {
             font-family: "Gilroy Bold", serif;
             font-size: 14px;
             line-height: 1.3;
-            color: #1f1f1f;
+            color: white;
             width: 75%;
             align-self: center;
           }
@@ -127,7 +127,7 @@ export default {
           height: 57%;
           margin: 4px 4px 0 0;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #5da1f3, #708efa);
+          background-image: linear-gradient(to right top, #4f80fd, #ce80ff);
 
           .label {
             padding: 15px 20px 0 20px;
@@ -159,7 +159,7 @@ export default {
           margin: 0 4px 0 4px;
           width: 100%;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #fadcb8, #fddda7);
+          background-image: linear-gradient(to right top, #ff9849, #ffdd78);
 
           .label {
             padding: 0 20px 20px 20px;
@@ -168,7 +168,7 @@ export default {
             font-size: 19px;
             letter-spacing: -0.5px;
             line-height: 1.4;
-            color: #343434;
+            color: white;
           }
 
           .image {
@@ -197,7 +197,7 @@ export default {
           margin: 0 4px 4px 4px;
           width: 55%;
           border-radius: 6px;
-          background-image: linear-gradient(to left bottom, #78c2f3, #69a6f1);
+          background-image: linear-gradient(to left bottom, #48dea9, #2499ff);
 
           .label {
             padding: 10px 0 5px 0;
@@ -225,7 +225,7 @@ export default {
           margin: 0 0 4px 4px;
           width: 45%;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #2b2b2b, #2d2d2d);
+          background-image: linear-gradient(to right top, #1d1d1d, #000634);
 
           .label {
             padding: 5px 20px 10px 20px;
@@ -257,7 +257,7 @@ export default {
           margin: 4px 0 0 4px;
           width: 100%;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #9ea3fa, #788df6);
+          background-image: linear-gradient(to right top, #c488ff, #6b83ff);
 
           .label {
             padding: 15px 0 15px 20px;
