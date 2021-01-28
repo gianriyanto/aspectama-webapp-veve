@@ -2,7 +2,7 @@
   <div id="SideBar">
     <div class="my-image-container">
       <span class="image">
-        <span class="label"> ET </span>
+        <span class="label"> VN </span>
       </span>
     </div>
     <div class="content-wrapper">
