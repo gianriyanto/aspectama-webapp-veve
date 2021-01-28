@@ -99,7 +99,7 @@ export default {
           height: 40%;
           margin: 0 4px 4px 0;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #ff4998, #ff995b);
+          background-image: linear-gradient(to right top, #ff4874, #ff995b);
 
           .label {
             text-align: center;
@@ -159,7 +159,7 @@ export default {
           margin: 0 4px 0 4px;
           width: 100%;
           border-radius: 6px;
-          background-image: linear-gradient(to right top, #ff9849, #ffdd78);
+          background-image: linear-gradient(to right top, #ffba6d, #ffda6b);
 
           .label {
             padding: 0 20px 20px 20px;

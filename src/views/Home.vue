@@ -198,7 +198,7 @@ export default {
             line-height: 1.15;
 
             .highlight-name {
-              color: #5675e7;
+              color: #3761ff;
             }
           }
         }

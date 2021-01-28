@@ -420,7 +420,7 @@ export default {
 
       .submit-button {
         width: 48%;
-        background-image: linear-gradient(to right top, #5675e7, #5c99e3);
+        background-image: linear-gradient(to right top, #3f75ff, #6aacff);
         border-radius: 8px;
 
         .button-label {
