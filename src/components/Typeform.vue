@@ -275,7 +275,7 @@ export default {
         margin-left: 15px;
         height: 100%;
         width: 38%;
-        background-image: linear-gradient(to right top, #5675e7, #5c99e3);
+        background-image: linear-gradient(to right top, #3f75ff, #6aacff);
         border-radius: 8px;
         transition: all .3s ease-in-out;
         filter: drop-shadow(1px 3px 5px rgb(145, 172, 200));
