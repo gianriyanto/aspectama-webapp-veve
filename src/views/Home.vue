@@ -5,7 +5,7 @@
       <div class="body-wrapper">
         <transition appear name="fade">
           <span class="header-container">
-            <span class="header-text"> Hi! I'm <span class="highlight-name"> Ervina. </span> </span>
+            <span class="header-text"> Hi! I'm <span class="highlight-name"> Veve. </span> </span>
             <span class="header-text"> Your education counselor. </span>
           </span>
         </transition>
