@@ -6,9 +6,9 @@
            src="@/assets/logo/AspectamaLogo.png" alt="">
     </span>
     <button class="myCard-button">
-      <span class="button-label">
+      <a class="button-label" :href="`${publicPath}VeveNicolen_NameCard.png`" target="_blank">
         Take my card
-      </span>
+      </a>
     </button>
   </div>
 </template>
@@ -21,6 +21,11 @@ export default {
       window.open(url, '_blank');
     }
   },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  }
 }
 </script>
 

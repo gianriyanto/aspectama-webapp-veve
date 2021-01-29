@@ -12,9 +12,9 @@
       </span>
     </button>
     <button class="my-card-button">
-      <span class="button-label">
+      <a class="button-label" :href="`${publicPath}VeveNicolen_NameCard.png`" target="_blank">
         Take my card
-      </span>
+      </a>
     </button>
     <button class="testimony-button">
       <span class="button-label">
@@ -41,6 +41,11 @@ export default {
       window.open(url, '_blank');
     }
   },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  }
 }
 </script>
 
