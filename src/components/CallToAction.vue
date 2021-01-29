@@ -1,6 +1,6 @@
 <template>
   <div id="CallToAction">
-    <button class="contact-button" v-on:click="goToSite('https://wa.me/+6281232012145')">
+    <button class="contact-button" v-on:click="goToSite('https://wa.me/+6282114790477')">
       <font-awesome-icon class="whatsapp-icon" :icon="['fab', 'whatsapp']" />
       <span class="button-label">
         Contact Me

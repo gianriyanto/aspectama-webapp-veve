@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { init } from 'emailjs-com';
 
 Vue.use(VueScrollTo)
-init("user_QRtMhtGACRk9EF2dvew9l");
+init("user_5lb8eHv64C9LhhI5H6oMb");
 library.add(faInstagram, faFacebook, faWhatsapp, faGlobe, faEnvelope);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

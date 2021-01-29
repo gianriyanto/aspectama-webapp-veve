@@ -1,5 +1,5 @@
 <template>
- <div id="FloatingActionButton" v-on:click="goToSite('https://wa.me/+6281232012145')">
+ <div id="FloatingActionButton" v-on:click="goToSite('https://wa.me/+6282114790477')">
    <font-awesome-icon class="whatsapp-icon" :icon="['fab', 'whatsapp']" />
  </div>
 </template>
