@@ -38,7 +38,7 @@
     </div>
     <div class="input-card" v-bind:class="{'isvalid-border': country.isValid}" v-else>
       <span class="prompt">
-        And study abroad to
+        And travel abroad to
       </span>
       <span class="input">
         <inline-input v-bind:inputData="country"/>
@@ -50,7 +50,7 @@
         Cool! It's best to reach you at
       </span>
       <span class="input">
-        Your mobile or email
+        What's your mobile number or email
       </span>
     </div>
     <div class="input-card" v-bind:class="{'isvalid-border': contact.isValid}" v-else>
@@ -105,7 +105,7 @@ export default {
       name: {prompt: 'Your full name', input: 'Your full name', edit: false, isValid: false},
       course: {prompt: 'Interested major or course', input: 'Interested major or course', edit: false, isValid: false},
       country: {prompt: 'Preferred city or country?', input: 'Preferred city or country?', edit: false, isValid: false},
-      contact: {prompt: 'Your mobile or email', input: 'Your mobile or email', edit: false, isValid: false},
+      contact: {prompt: "What's your mobile number or email", input: "What's your mobile number or email", edit: false, isValid: false},
       buttonLabel: "Submit",
       buttonStyle: "submit-button"
     }
@@ -142,7 +142,7 @@ export default {
       this.name = {prompt: 'Your full name', input: 'Your full name', edit: false, isValid: false};
       this.course ={prompt: 'Interested major or course', input: 'Interested major or course', edit: false, isValid: false};
       this.country = {prompt: 'Preferred city or country?', input: 'Preferred city or country?', edit: false, isValid: false};
-      this.contact = {prompt: 'Your mobile or email', input: 'Your mobile or email', edit: false, isValid: false};
+      this.contact = {prompt: "What's your mobile number or email", input: "What's your mobile number or email", edit: false, isValid: false};
     },
     getSelectedProgram: function(){
       for (let i = 0; i < this.programs.length; i++) {
