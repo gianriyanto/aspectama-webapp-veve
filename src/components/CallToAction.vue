@@ -16,11 +16,13 @@
         Take my card
       </a>
     </button>
-    <button class="testimony-button">
-      <span class="button-label">
-        Client Stories
-      </span>
-    </button>
+    <router-link to="/testimony">
+      <button class="testimony-button">
+        <span class="button-label">
+          Client Stories
+        </span>
+      </button>
+    </router-link>
     <span class="scroll-container">
       <chevrons-down-icon size="1.5x" class="scroll-icon"></chevrons-down-icon>
     </span>
