@@ -4,8 +4,8 @@
       62 877 4102 9750
     </span>
     <span class="slash"> / </span>
-    <a class="email" href="mailto:consult@aspectamalsut.co.id">
-      admin@aspectamalsut.co.id
+    <a class="email" href="mailto:consult@aspectamaalsut.co.id">
+      admin@aspectamaalsut.co.id
     </a>
   </div>
 </template>
@@ -63,14 +63,14 @@ export default {
 
     .phone{
       font-family: "Gilroy Regular", serif;
-      font-size: 14px;
+      font-size: 16px;
       color: #1f1f1f;
       margin-bottom: 5px;
     }
 
     .email{
       font-family: "Gilroy Regular", serif;
-      font-size: 14px;
+      font-size: 16px;
       color: #1f1f1f;
       margin-bottom: 5px;
     }

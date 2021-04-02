@@ -50,7 +50,7 @@
         Cool! It's best to reach you at
       </span>
       <span class="input">
-        What's your mobile number or email
+        Type your phone number
       </span>
     </div>
     <div class="input-card" v-bind:class="{'isvalid-border': contact.isValid}" v-else>
@@ -61,19 +61,20 @@
         <inline-input v-bind:inputData="contact"/>
       </span>
     </div>
-
     <transition appear name="fade">
       <div class="footer-container">
         <span v-if="country.isValid && course.isValid && name.isValid && contact.isValid" class="footer-text">
           Thanks <span class="highlight-name"> {{ name.input.split(' ')[0] }}! </span> chat soon.
         </span>
+        <span v-else-if="showValidateError && !isFormValid" class="error-text">
+          Please make sure you've filled out everything.
+        </span>
       </div>
     </transition>
-
     <div class="button-container">
-      <button class="clear-button"  @click="handleClear()">
+      <button class="clear-button" @click="handleClear()">
         <span class="button-label">
-          Start new
+          Clear
         </span>
       </button>
       <button :class="buttonStyle" @click="handleSubmit">
@@ -105,17 +106,18 @@ export default {
       name: {prompt: 'Your full name', input: 'Your full name', edit: false, isValid: false},
       course: {prompt: 'Interested major or course', input: 'Interested major or course', edit: false, isValid: false},
       country: {prompt: 'Preferred city or country?', input: 'Preferred city or country?', edit: false, isValid: false},
-      contact: {prompt: "What's your mobile number or email", input: "What's your mobile number or email", edit: false, isValid: false},
+      contact: {prompt: "Type your phone number", input: "Type your phone number", edit: false, isValid: false},
       buttonLabel: "Submit",
-      buttonStyle: "submit-button"
+      buttonStyle: "submit-button",
+      showValidateError: false,
+      isFormValid: true,
     }
   },
   methods: {
     handleSubmit(){
-      if (this.buttonLabel === "Submit"){
-
-        this.getSelectedProgram();
-
+      this.validateForm()
+      this.getSelectedProgram();
+      if (this.isFormValid && this.buttonLabel === "Submit"){
         emailjs.send(
             "service_6v0gp13",
             "template_ys6wc7t",
@@ -127,6 +129,7 @@ export default {
               contact: this.contact.input
             }
         );
+        this.showValidateError = false;
         this.buttonLabel = 'Submitted!';
         this.buttonStyle = 'submitted-button';
       }
@@ -134,24 +137,32 @@ export default {
     handleClear: function(){
       this.buttonLabel = 'Submit';
       this.buttonStyle = 'submit-button';
+      this.showValidateError = false;
       this.clearForm();
     },
     clearForm: function(){
       this.componentKey += 1;
       this.programs = [{programName: 'Pre-uni Pathway', isSelected: false, imageURL:'team_work.svg'}, {programName: 'Under Graduate', isSelected: false, imageURL:'career_-2.svg'}, {programName: 'Post Graduate', isSelected: false, imageURL:'knowledge_.svg'} ];
       this.name = {prompt: 'Your full name', input: 'Your full name', edit: false, isValid: false};
-      this.course ={prompt: 'Interested major or course', input: 'Interested major or course', edit: false, isValid: false};
+      this.course = {prompt: 'Interested major or course', input: 'Interested major or course', edit: false, isValid: false};
       this.country = {prompt: 'Preferred city or country?', input: 'Preferred city or country?', edit: false, isValid: false};
-      this.contact = {prompt: "What's your mobile number or email", input: "What's your mobile number or email", edit: false, isValid: false};
+      this.contact = {prompt: "Type your phone number", input: "Type your phone number", edit: false, isValid: false};
     },
     getSelectedProgram: function(){
       for (let i = 0; i < this.programs.length; i++) {
-        if (this.programs[i].isSelected) {
+        if (this.programs[i].isSelected === true) {
           this.selectedProgram = this.programs[i].programName;
+          break
         }
-        else{
-          this.selectedProgram = 'no program selected';
-        }
+      }
+    },
+    validateForm: function() {
+      if (this.selectedProgram && this.name.isValid && this.course.isValid && this.country.isValid && this.contact.isValid) {
+        this.isFormValid = true
+        this.showValidateError = false
+      } else {
+        this.isFormValid = false
+        this.showValidateError = true
       }
     }
   }
@@ -228,7 +239,7 @@ export default {
     }
 
     .footer-container {
-      padding-left: 5px;
+      margin: 0 auto;
       padding-top: 5px;
       display: flex;
       flex-direction: column;
@@ -243,6 +254,11 @@ export default {
         .highlight-name {
           font-family: "Bw Modelica Bold", serif;
         }
+      }
+      .error-text {
+        font-family: "Bw Modelica Regular", serif;
+        font-size: 12px;
+        color: #ca6767;
       }
     }
 
@@ -382,6 +398,7 @@ export default {
     }
 
     .footer-container {
+      margin: 0 auto;
       padding-left: 5px;
       padding-top: 5px;
       display: flex;
@@ -396,6 +413,11 @@ export default {
         .highlight-name {
           font-family: "Bw Modelica Bold", serif;
         }
+      }
+      .error-text {
+        font-family: "Bw Modelica Regular", serif;
+        font-size: 12px;
+        color: #ca6767;
       }
     }
 
